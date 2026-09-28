@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+
+  button,
+  [type='button'],
+  [role='button'] {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: #d7ebe4;
+  }
+}
+
+dialog {
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  max-width: calc(100% - 2rem);
+}
+
+dialog::backdrop {
+  background: rgba(7, 46, 41, 0.46);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
